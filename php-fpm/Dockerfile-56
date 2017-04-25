@@ -55,7 +55,7 @@ RUN if [ ${INSTALL_SOAP} = true ]; then \
 #####################################
 ARG INSTALL_YAR=false
 RUN if [ ${INSTALL_YAR} = true ]; then \
-RUN apt-get -y install libcurl4-openssl-dev && \
+    apt-get -y install libcurl4-openssl-dev && \
     yes '' | pecl install -f yar \
 ;fi
 
